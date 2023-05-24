@@ -35,12 +35,12 @@ basic.forever(function () {
    
 
     radio.onReceivedNumber(function (receivedNumber) {
-        if (receivedNumber > 0) {
-            car_motor(receivedNumber , receivedNumber - 143)
-        }else if(receivedNumber === 254){
-            car_motor(receivedNumber - 50, receivedNumber - 143)
-        }else if (receivedNumber === 253) {
+        if (receivedNumber === 255) {
             car_motor(receivedNumber, receivedNumber - 143 - 50)
+        }else if(receivedNumber === 254){
+            car_motor(receivedNumber - 75, receivedNumber - 143)
+        }else if (receivedNumber === 253) {
+            car_motor(receivedNumber, receivedNumber - 143 - 75)
         }
         else {
             car_motor(0, 0)
